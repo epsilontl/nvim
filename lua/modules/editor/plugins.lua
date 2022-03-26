@@ -33,11 +33,6 @@ editor['JoosepAlviste/nvim-ts-context-commentstring'] = {
     opt = true,
     after = 'nvim-treesitter'
 }
-editor["akinsho/nvim-toggleterm.lua"] = {
-	opt = true,
-	event = "BufRead",
-	config = conf.toggleterm,
-}
 editor['andymass/vim-matchup'] = {
     opt = true,
     after = 'nvim-treesitter',

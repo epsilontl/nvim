@@ -143,54 +143,6 @@ function config.fidget()
 	})
 end
 
-function config.lightbulb()
-	vim.cmd([[autocmd CursorHold,CursorHoldI * lua require'nvim-lightbulb'.update_lightbulb()]])
-	require'nvim-lightbulb'.setup {
-		-- LSP client names to ignore
-		-- Example: {"sumneko_lua", "null-ls"}
-		ignore = {},
-		sign = {
-			enabled = true,
-			-- Priority of the gutter sign
-			priority = 10,
-		},
-		float = {
-			enabled = false,
-			-- Text to show in the popup float
-			text = "💡",
-			-- Available keys for window options:
-			-- - height     of floating window
-			-- - width      of floating window
-			-- - wrap_at    character to wrap at for computing height
-			-- - max_width  maximal width of floating window
-			-- - max_height maximal height of floating window
-			-- - pad_left   number of columns to pad contents at left
-			-- - pad_right  number of columns to pad contents at right
-			-- - pad_top    number of lines to pad contents at top
-			-- - pad_bottom number of lines to pad contents at bottom
-			-- - offset_x   x-axis offset of the floating window
-			-- - offset_y   y-axis offset of the floating window
-			-- - anchor     corner of float to place at the cursor (NW, NE, SW, SE)
-			-- - winblend   transparency of the window (0-100)
-			win_opts = {},
-		},
-		virtual_text = {
-			enabled = false,
-			-- Text to show at virtual text
-			text = "💡",
-			-- highlight mode to use for virtual text (replace, combine, blend), see :help nvim_buf_set_extmark() for reference
-			hl_mode = "replace",
-		},
-		status_text = {
-			enabled = false,
-			-- Text to provide when code actions are available
-			text = "💡",
-			-- Text to provide when no actions are available
-			text_unavailable = ""
-		}
-}
-end
-
 function config.nvim_lint()
 	require("lint").linters_by_ft = {
 		python = {"pylint"}
@@ -222,44 +174,9 @@ function config.luasnip()
 	require("luasnip/loaders/from_vscode").load({paths = {"~/.config/nvim/md-snippets"}})
 end
 
-function config.signature()
-	require("lsp_signature").setup(
-	{
-		bind = true,
-		-- 边框样式
-		handler_opts = {
-			-- double、rounded、single、shadow、none
-			border = "rounded"
-		},
-		-- 自动触发
-		floating_window = false,
-		-- 绑定按键
-		toggle_key = "<C-j>",
-		-- 虚拟提示关闭
-		hint_enable = false,
-		-- 正在输入的参数将如何突出显示
-		hi_parameter = "LspSignatureActiveParameter"
-	}
-	)
-end
 
 function config.autopairs()
 	require("nvim-autopairs").setup({})
 end
 
-function config.aerial()
-	require("aerial").setup(
-	{
-		min_width = 30,
-		-- backends = {"lsp", "treesitter", "markdown"}
-		backends = {"treesitter", "markdown"},
-		-- false 是显示所有的图标
-		filter_kind = false,
-		-- 将从 lspkind 和 nvim-web-devicons 中获得图标
-		nerd_font = "auto",
-		-- 何时更新
-		update_events = "TextChanged,InsertLeave",
-	}
-	)
-end
 return config

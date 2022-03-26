@@ -19,7 +19,7 @@ local capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protoco
 -- also note that the installed versions of nodejs and npm should be newer, too long versions will cause lsp to not work properly
 
 local servers = {
-    sumneko_lua = require("modules.completion.lsp.sumneko_lua"),
+    -- sumneko_lua = require("modules.completion.lsp.sumneko_lua"),
     pyright = require("modules.completion.lsp.pyright"),
     -- tsserver = require("modules.completion.lsp.tsserver"),
     -- html = require("modules.completion.lsp.html"),
@@ -46,9 +46,17 @@ local function disgnostic_settings()
     )
 end
 
-local function attach(client)
-    require("aerial").on_attach(client)
-    disgnostic_settings()
+local function attach()
+	require("lsp_signature").on_attach({
+		bind = true,
+		handler_opts = {
+			border = "rounded"
+		},
+		floating_window = false,
+		hint_enable = false,
+		hi_parameter = "LspSignatureActiveParameter",
+		toggle_key = "<C-j>"
+	})
 end
 
 -- automatically install or start LanguageServers

@@ -12,17 +12,13 @@ completion["tami5/lspsaga.nvim"] = {
 	after = "nvim-lspconfig",
 	config = conf.lspsaga
 }
-completion["ray-x/lsp_signature.nvim"] = { opt = true, after = "nvim-lspconfig",config = conf.signature}
+completion["ray-x/lsp_signature.nvim"] = { opt = true, after = "nvim-lspconfig"}
 completion["j-hui/fidget.nvim"] = {
 	opt = false,
 	config = conf.fidget
 }
-completion["kosayoda/nvim-lightbulb"] = { opt = true,
-	after = "lspsaga.nvim",
-	config = conf.lightbulb
-}
 completion["mfussenegger/nvim-lint"] = { opt = true,
-	after = "nvim-lightbulb",
+	after = "lspsaga.nvim",
 	config = conf.nvim_lint
 }
 completion["hrsh7th/nvim-cmp"] = {
@@ -44,11 +40,6 @@ completion["L3MON4D3/LuaSnip"] = {
 	after = "nvim-cmp",
 	config = conf.luasnip,
 	requires = "rafamadriz/friendly-snippets",
-}
-completion["stevearc/aerial.nvim"] = {
-	opt = true,
-	after = "LuaSnip",
-	config = conf.aerial,
 }
 completion["windwp/nvim-autopairs"] = {
 	after = "nvim-cmp",
