@@ -1,0 +1,78 @@
+{
+    "#!/usr/bin/env python": {
+        "prefix": "env",
+        "body": "#!/usr/bin/env python\n$0",
+        "description" : "Adds shebang line for default python interpreter."
+    },
+    "#!/usr/bin/env python3": {
+        "prefix": "env3",
+        "body": "#!/usr/bin/env python3\n$0",
+        "description" : "Adds shebang line for default python 3 interpreter."
+    },
+    "# -*- coding=utf-8 -*-": {
+        "prefix": "enc",
+        "body": "# -*- coding=utf-8 -*-\n$0",
+        "description" : "set default python2.x encoding specification to utf-8 as it is mentioned in pep-0263."
+    },
+    "# coding=utf-8": {
+        "prefix": "enco",
+        "body": "# coding=utf-8\n$0",
+        "description" : "Set default python3 encoding specification to utf-8, by default this is the encoding for python3.x as it is mentioned in pep-3120."
+    },
+    "from future import ...": {
+        "prefix": "fenc",
+        "body": [
+            "# -*- coding: utf-8 -*-",
+            "from __future__ import absolute_import, division, print_function, unicode_literals"
+        ],
+        "description" : "Import future statement definitions for python2.x scripts using utf-8 as encoding."
+    },
+    "from future import ... v1": {
+        "prefix": "fenco",
+        "body": [
+            "# coding: utf-8",
+            "from __future__ import absolute_import, division, print_function, unicode_literals"
+        ],
+        "description" : "Import future statement definitions for python3.x scripts using utf-8 as encoding."
+    },
+    "New async function": {
+        "prefix": "adef",
+        "body": "async def ${1:fname}(${2:arg}):\n\t${3:pass}$0",
+        "description" : "Code snippet for async function definition."
+    },
+    "New property": {
+        "prefix": "property",
+        "body": "@property\ndef ${1:foo}(self):\n    \"\"\"${2:The $1 property.}\"\"\"\n    ${3:return self._$1}\n@${4:$1}.setter\ndef ${5:$1}(self, value):\n    ${6:self._$1} = value",
+        "description": "New property: get and set via decorator"
+    },
+    "New froperty": {
+        "prefix": "property",
+        "body": "def ${1:foo}():\n    doc = \"${2:The $1 property.}\"\n    def fget(self):\n        ${3:return self._$1}\n    def fset(self, value):\n        ${4:self._$1 = value}\n    def fdel(self):\n        ${5:del self._$1}\n    return locals()\n$1 = property(**$1())$0",
+        "description" : ""
+    },
+    "try:except:": {
+        "prefix": "try",
+        "body": "try:\n\t${1:pass}\nexcept ${2:Exception} as ${3:e}:\n\t${4:raise $3}$0",
+        "description" : "Code Snippet for a try and except blocks."
+    },
+    "try:except:else:finally": {
+        "prefix": "tryef",
+        "body": "try:\n\t${1:pass}\nexcept${2: ${3:Exception} as ${4:e}}:\n\t${5:raise}\nelse:\n\t${6:pass}\nfinally:\n\t${7:pass}$0",
+        "description" : "Code Snippet for a try/except/finally with else statement."
+    },
+    "try:except:else": {
+        "prefix": "trye",
+        "body": "try:\n\t${1:pass}\nexcept ${2:Exception} as ${3:e}:\n\t${4:raise $3}\nelse:\n\t${5:pass}$0",
+        "description" : "Code Snippet for a try/except with else statement."
+    },
+    "try:except:finally": {
+        "prefix": "tryf",
+        "body": "try:\n\t${1:pass}\nexcept ${2:Exception} as ${3:e}:\n\t${4:raise $3}\nfinally:\n\t${5:pass}$0",
+        "description" : "Code Snippet for a try/except/finally."
+    },
+    "__magic__": {
+        "prefix": "__",
+        "body": "__${1:init}__$0",
+        "description" : "Code snippet to create magic methods."
+    },
+}
