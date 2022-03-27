@@ -36,18 +36,10 @@ function config.nvim_textobjects()
                     ["]]"] = "@function.outer",
                     ["]m"] = "@class.outer"
                 },
-                goto_next_end = {
-                    ["qwe"] = "@function.outer",
-                    ["qwe"] = "@class.outer"
-                },
                 goto_previous_start = {
                     ["[["] = "@function.outer",
                     ["[m"] = "@class.outer"
                 },
-                goto_previous_end = {
-                    ["[]"] = "@function.outer",
-                    ["[M"] = "@class.outer"
-                }
             }
         },
     }
