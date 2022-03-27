@@ -12,13 +12,6 @@ tools['nvim-telescope/telescope.nvim'] = {
         {'nvim-lua/plenary.nvim', opt = true}
     }
 }
-tools['kyazdani42/nvim-tree.lua'] = {
-	opt = false,
-	requires = {
-		'kyazdani42/nvim-web-devicons'
-	},
-	config = conf.nvim_tree
-}
 tools['nvim-telescope/telescope-fzy-native.nvim'] = {
     opt = true,
     after = 'telescope.nvim'
@@ -38,6 +31,16 @@ tools['gelguy/wilder.nvim'] = {
     event = "CmdlineEnter",
     config = conf.wilder,
     requires = {{'romgrk/fzy-lua-native', after = 'wilder.nvim'}}
+}
+tools['iamcco/markdown-preview.nvim'] = {
+    opt = true,
+    ft = "markdown",
+    run = 'cd app && yarn install',
+    config = conf.markdown_view
+}
+tools['dhruvasagar/vim-table-mode'] = {
+    opt = true,
+    ft = {"markdown","text"}
 }
 
 return tools

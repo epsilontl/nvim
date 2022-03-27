@@ -27,5 +27,12 @@ ui['akinsho/nvim-bufferline.lua'] = {
     event = 'BufRead',
     config = conf.nvim_bufferline
 }
+ui['kyazdani42/nvim-tree.lua'] = {
+	opt = false,
+	requires = {
+		'kyazdani42/nvim-web-devicons'
+	},
+	config = conf.nvim_tree
+}
 
 return ui
