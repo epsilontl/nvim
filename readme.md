@@ -10,9 +10,9 @@ This is my neovim's configuration.
 - Easy to customize.
 
 Some results are displayed, in addition to powerful auto-completion and fuzzy search, floating terminal and other functions
-![gitsign](https://github.com/epsilontl/nvim/assets/gitsign.gif)
-![lsp](https://github.com/epsilontl/nvim/assets/lsp.gif)
-![lazygit](https://github.com/epsilontl/nvim/assets/lazygit.gif)
+![gitsign](https://github.com/epsilontl/nvim/blob/master/assets/gitsign.gif)
+![lsp](https://github.com/epsilontl/nvim/blob/master/assets/lsp.gif)
+![lazygit](https://github.com/epsilontl/nvim/blob/master/assets/lazygit.gif)
 
 ## Requirements
 
