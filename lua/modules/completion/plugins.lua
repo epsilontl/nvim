@@ -1,12 +1,12 @@
 local completion = {}
 local conf = require('modules.completion.config')
 
-completion['neovim/nvim-lspconfig'] = {
+completion["neovim/nvim-lspconfig"] = {
     opt = true,
     event = 'BufReadPre',
     config = conf.nvim_lsp
 }
-completion['williamboman/nvim-lsp-installer'] = {opt = true, after = 'nvim-lspconfig'}
+completion["williamboman/nvim-lsp-installer"] = {opt = true, after = 'nvim-lspconfig'}
 completion["tami5/lspsaga.nvim"] = {
 	opt = true,
 	after = "nvim-lspconfig",

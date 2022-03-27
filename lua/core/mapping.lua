@@ -18,7 +18,7 @@ local def_map = {
 	["n|<leader><right>"] = map_cr('vertical resize+5'):with_noremap(),
     ["n|<leader>o"] = map_cr("setlocal spell! spelllang=en_us"):with_noremap(),
     -- Insert
-    ["i|<C-u>"] = map_cmd('<C-G>u<C-U>'):with_noremap(),
+    ["i|<C-u>"] = map_cmd('<C-[>ua'):with_noremap(),
     ["i|<C-a>"] = map_cmd('<ESC>^i'):with_noremap(),
     -- command line
     ["c|<C-b>"] = map_cmd('<Left>'):with_noremap(),

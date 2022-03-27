@@ -22,7 +22,7 @@ ui['lukas-reineke/indent-blankline.nvim'] = {
     event = 'BufRead',
     config = conf.indent_blankline
 }
-ui['akinsho/nvim-bufferline.lua'] = { 
+ui['akinsho/bufferline.nvim'] = { 
 	opt = true,
     event = 'BufRead',
     config = conf.nvim_bufferline
