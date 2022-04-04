@@ -21,6 +21,7 @@ local capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protoco
 local servers = {
     -- sumneko_lua = require("modules.completion.lsp.sumneko_lua"),
     pyright = require("modules.completion.lsp.pyright"),
+	clangd = require("modules.completion.lsp.clangd")
     -- tsserver = require("modules.completion.lsp.tsserver"),
     -- html = require("modules.completion.lsp.html"),
     -- cssls = require("modules.completion.lsp.cssls"),

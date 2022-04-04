@@ -77,12 +77,12 @@ function config.sniprun()
         repl_disable = {}, -- " disable REPL-like behavior for the given interpreters
 
         interpreter_options = {
-            -- C_original = {
-            --     compiler = "clang"
-            -- },
-            -- Cpp_original = {
-            --     compiler = "clang --debug"
-            -- }
+            C_original = {
+                compiler = "clang"
+            },
+            Cpp_original = {
+                compiler = "clang --debug"
+            }
         }, -- " intepreter-specific options, consult docs / :SnipInfo <name>
 
         -- " you can combo different display modes as desired

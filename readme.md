@@ -111,18 +111,18 @@ git clone https://github.com/epsilontl/nvim.git ~/.config/nvim
 
 ### tools
 
-| Shortcut           | Action                                |
-|--------------------|---------------------------------------|
-| `Cf`               | Search file                           |
-| `Cw`               | Search word                           |
-| `Co`               | Search old file                       |
-| `Ch`               | Search help documentation             |
-| `Cg`               | Search git file                       |
-| `<C-p>`            | Page up                               |
-| `<C-n>`            | Page down                             |
-| `F5` or visual `r` | Run code                              |
-| `<leader>r`        | View markdown                         |
-| `<leader>tm`       | Vim-table-mode(markdown table format) |
+| Shortcut     | Action                                |
+|--------------|---------------------------------------|
+| `Cf`         | Search file                           |
+| `Cw`         | Search word                           |
+| `Co`         | Search old file                       |
+| `Ch`         | Search help documentation             |
+| `Cg`         | Search git file                       |
+| `<C-p>`      | Page up                               |
+| `<C-n>`      | Page down                             |
+| visual `r`   | Run code                              |
+| `<leader>r`  | run file(c,cpp,py,markdown)           |
+| `<leader>tm` | Vim-table-mode(markdown table format) |
 
 ### editor
 

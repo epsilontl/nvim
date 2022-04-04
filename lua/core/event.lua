@@ -74,7 +74,7 @@ function autocmd.load_autocmds()
 			{ "FileType", "markdown", "inoremap <buffer> ,e <Esc>/<++><CR>:nohlsearch<CR>\"_c4l| inoremap <buffer> ,w <Esc>/ <++><CR>:nohlsearch<CR>\"_c5l<CR>| inoremap <buffer> ,n ---<Enter><Enter>| inoremap <buffer> ,b **** <++><Esc>F*hi| inoremap <buffer> ,s ~~~~ <++><Esc>F~hi| inoremap <buffer> ,f ** <++><Esc>F*i| inoremap <buffer> ,d `` <++><Esc>F`i| inoremap <buffer> ,c ```<Enter><++><Enter>```<Enter><Enter><++><Esc>4kA|inoremap <buffer> ,m - [ ]| inoremap <buffer> ,p ![](<++>) <++><Esc>F[a| inoremap <buffer> ,a [](<++>) <++><Esc>F[a| inoremap <buffer> ,1 #<Space><Enter><Enter><++><Esc>kkA| inoremap <buffer> ,2 ##<Space><Enter><Enter><++><Esc>kkA| inoremap <buffer> ,3 ###<Space><Enter><Enter><++><Esc>kkA| inoremap <buffer> ,4 ####<Space><Enter><Enter><++><Esc>kkA| inoremap <buffer> ,5 #####<Space><Enter><Enter><++><Esc>kkA" },
 			{ "FileType", "make", "set noexpandtab shiftwidth=8 softtabstop=0" },
 			-- Google tab style
-			{ "FileType", "c,cpp", "set expandtab tabstop=2 shiftwidth=2" },
+			{ "FileType", "c,cpp", "set expandtab tabstop=4 shiftwidth=4" },
 			{ "FileType", "dap-repl", "lua require('dap.ext.autocompl').attach()" },
 			{
 				"FileType",
@@ -83,8 +83,23 @@ function autocmd.load_autocmds()
 			},
 			{
 				"FileType",
-				"c,cpp",
-				"nnoremap <leader>h :ClangdSwitchSourceHeaderVSplit<CR>",
+				"c",
+				"nnoremap <leader>r :set splitbelow|sp|res -5|term gcc % -o %< && time ./%<<CR>i",
+			},
+			{
+				"FileType",
+				"cpp",
+				"nnoremap <leader>r :set splitbelow|exec '!g++ -std=c++11 % -Wall -o %<'|sp|res -10|term ./%<<CR>i",
+			},
+			{
+				"FileType",
+				"python",
+				"nnoremap <leader>r :set splitbelow|sp|res -5|term<CR>",
+			},
+			{
+				"FileType",
+				"markdown",
+				"nnoremap <leader>r :MarkdownPreviewToggle<CR>",
 			},
 		},
 		yank = {

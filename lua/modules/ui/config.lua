@@ -123,8 +123,8 @@ function config.gitsigns()
                 expr = true,
                 "&diff ? '[g' : '<cmd>lua require\"gitsigns\".prev_hunk()<CR>'"
             },
-
             ['n K'] = '<cmd>lua require"gitsigns".preview_hunk()<CR>',
+			["n J"] = '<cmd>lua require"gitsigns".reset_hunk()<CR>',
         },
         watch_gitdir = {interval = 1000, follow_files = true},
         current_line_blame = true,
@@ -216,8 +216,6 @@ function config.nvim_tree()
 	vim.g.nvim_tree_add_trailing = 0
 
 	require('nvim-tree').setup ({
-        -- 自动关闭
-        auto_close = true,
         -- 视图
         view = {
             -- 宽度

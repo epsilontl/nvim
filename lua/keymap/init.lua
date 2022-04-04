@@ -64,8 +64,6 @@ local plug_map = {
     ["n|t"] = map_cmd("v:lua.enhance_ft_move('t')"):with_expr(),
     ["n|T"] = map_cmd("v:lua.enhance_ft_move('T')"):with_expr(),
     ["n|;"] = map_cmd("v:lua.enhance_ft_move(';')"):with_expr(),
-    -- Plugin InstantMarkdownPreview
-    ["n|<leader>r"] = map_cr('MarkdownPreviewToggle'):with_noremap():with_silent(),
     -- Plugin vim-table-mode
     ["n|<leader>tm"] = map_cr('TableModeToggle'):with_noremap():with_silent(),
     -- Plugin SnipRun
