@@ -94,7 +94,7 @@ function autocmd.load_autocmds()
 			{
 				"FileType",
 				"python",
-				"nnoremap <leader>r :set splitbelow|sp|res -5|term<CR>",
+				"nnoremap <leader>r :set splitbelow|sp|res -5|term python3 %<CR>i",
 			},
 			{
 				"FileType",

@@ -97,6 +97,7 @@ git clone https://github.com/epsilontl/nvim.git ~/.config/nvim
 | `<C-p>`     | Page up          |
 | `<C-n>`     | Page down        |
 | `<leader>a` | Float terminal   |
+| `<leader>z` | Open terminal    |
 | `gq`        | Close terminal   |
 | `<C-g>`     | Open lazygit     |
 

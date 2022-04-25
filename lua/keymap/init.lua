@@ -46,7 +46,8 @@ local plug_map = {
     ["n|<C-n>"] = map_cmd("<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>"):with_noremap():with_silent(),
     ["n|<leader>a"] = map_cu('Lspsaga open_floaterm'):with_noremap():with_silent(),
     ["t|gq"] = map_cu([[<C-\><C-n>:Lspsaga close_floaterm<CR>]]):with_noremap()
-        :with_silent(),
+		:with_silent(),
+    ["n|<leader>z"] = map_cu('set splitbelow|sp|res -5|term'):with_noremap():with_silent(),
     ["n|<C-g>"] = map_cu("Lspsaga open_floaterm lazygit"):with_noremap()
         :with_silent(),
     -- Plugin Telescope
@@ -68,7 +69,6 @@ local plug_map = {
     ["n|<leader>tm"] = map_cr('TableModeToggle'):with_noremap():with_silent(),
     -- Plugin SnipRun
     ["v|r"] = map_cr('SnipRun'):with_noremap():with_silent(),
-    ["n|<F5>"] = map_cr('%SnipRun'):with_noremap():with_silent(),
 };
 
 bind.nvim_load_mapping(plug_map)
