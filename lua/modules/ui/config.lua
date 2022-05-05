@@ -224,8 +224,6 @@ function config.nvim_tree()
             height = 30,
             -- 隐藏顶部的根目录显示
             hide_root_folder = false,
-            -- 自动调整大小
-            auto_resize = true
         },
         diagnostics = {
             -- 是否启用文件诊断信息
@@ -237,6 +235,26 @@ function config.nvim_tree()
                 error = ""
             }
         },
+		actions = {
+			use_system_clipboard = true,
+			change_dir = {
+				enable = true,
+				global = false,
+				restrict_above_cwd = false,
+			},
+			open_file = {
+				quit_on_open = false,
+				resize_window = true,
+				window_picker = {
+					enable = true,
+					chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890",
+					exclude = {
+						filetype = { "notify", "packer", "qf", "diff", "fugitive", "fugitiveblame" },
+						buftype = { "nofile", "terminal", "help" },
+					},
+				},
+			},
+		},
         git = {
             -- 是否启用 git 信息
             enable = true,
