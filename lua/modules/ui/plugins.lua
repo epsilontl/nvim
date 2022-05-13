@@ -1,7 +1,11 @@
 local ui = {}
 local conf = require('modules.ui.config')
 
-ui['sainnhe/edge'] = {opt = false, config = conf.edge}
+ui["catppuccin/nvim"] = {
+	opt = false,
+	as = "catppuccin",
+	config = conf.catppuccin,
+}
 ui['hoob3rt/lualine.nvim'] = {
     opt = false,
     config = conf.lualine

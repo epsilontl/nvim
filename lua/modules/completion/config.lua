@@ -143,27 +143,6 @@ function config.fidget()
 	})
 end
 
-function config.nvim_lint()
-	require("lint").linters_by_ft = {
-		python = {"pylint"}
-		-- javascript = {"eslint"},
-		-- typescript = {"eslint"},
-		-- go = {"golangcilint"}
-	}
-	require("lint.linters.pylint").args = {
-		"-f",
-		"json",
-		"--rcfile=~/.config/nvim/lint/pylint.conf"
-	}
-	-- 何时触发检测：
-	-- BufEnter    ： 载入 Buf 后
-	-- BufWritePost： 写入文件后
-	-- 由于搭配了 AutoSave，所以其他的事件就不用加了
-	vim.cmd([[
-	au BufEnter * lua require('lint').try_lint()
-	au BufWritePost * lua require('lint').try_lint()
-	]])
-end
 
 function config.luasnip()
 	require('luasnip').config.set_config {
