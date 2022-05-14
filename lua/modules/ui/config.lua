@@ -143,9 +143,24 @@ function config.gitsigns()
     end
     require('gitsigns').setup {
         signs = {
-            add = {hl = 'GitGutterAdd', text = '▎'},
-            change = {hl = 'GitGutterChange', text = '░'},
-            delete = {hl = 'GitGutterDelete', text = '▔'},
+			add = {
+				hl = "GitSignsAdd",
+				text = "│",
+				numhl = "GitSignsAddNr",
+				linehl = "GitSignsAddLn",
+			},
+			change = {
+				hl = "GitSignsChange",
+				text = "│",
+				numhl = "GitSignsChangeNr",
+				linehl = "GitSignsChangeLn",
+			},
+			delete = {
+				hl = "GitSignsDelete",
+				text = "_",
+				numhl = "GitSignsDeleteNr",
+				linehl = "GitSignsDeleteLn",
+			},
         },
         keymaps = {
             -- Default keymap options
@@ -187,8 +202,6 @@ function config.nvim_hlslens()
 	vim.api.nvim_set_keymap('n', '#', [[#<Cmd>lua require('hlslens').start()<CR>]], kopts)
 	vim.api.nvim_set_keymap('n', 'g*', [[g*<Cmd>lua require('hlslens').start()<CR>]], kopts)
 	vim.api.nvim_set_keymap('n', 'g#', [[g#<Cmd>lua require('hlslens').start()<CR>]], kopts)
-
-	vim.api.nvim_set_keymap('n', '<Leader>3', ':noh<CR>', kopts)
 end
 
 function config.indent_blankline()

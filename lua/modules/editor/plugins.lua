@@ -1,10 +1,17 @@
 local editor = {}
 local conf = require('modules.editor.config')
 
-editor['itchyny/vim-cursorword'] = {
-    opt = true,
-    event = {'BufReadPre', 'BufNewFile'},
-    config = conf.vim_cursorwod
+editor["RRethy/vim-illuminate"] = {
+	event = "BufRead",
+	config = function()
+		vim.g.Illuminate_highlightUnderCursor = 0
+		vim.g.Illuminate_ftblacklist = {
+			"help",
+			"packer",
+			"NvimTree",
+			"Outline",
+		}
+	end,
 }
 editor['terrortylor/nvim-comment'] = {
     opt = false,
@@ -13,6 +20,10 @@ editor['terrortylor/nvim-comment'] = {
             require("ts_context_commentstring.internal").update_commentstring()
         end,
     }) end
+}
+editor["romainl/vim-cool"] = {
+	opt = true,
+	event = { "CursorMoved", "InsertEnter" },
 }
 editor['nvim-treesitter/nvim-treesitter'] = {
     opt = true,

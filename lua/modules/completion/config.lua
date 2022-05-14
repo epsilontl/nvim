@@ -94,7 +94,7 @@ function config.cmp()
 		sources = {
 			{name = 'nvim_lsp'}, {name = 'nvim_lua'}, {name = 'luasnip'},
 			{name = 'buffer'}, {name = 'path'}, {name = 'spell'},
-			{name = 'tmux'}, {name = 'orgmode'}
+			{name = 'tmux'}, {name = 'orgmode'},{ name = "latex_symbols" },
 			-- {name = 'cmp_tabnine'},
 		}
 	}

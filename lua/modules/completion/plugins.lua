@@ -33,6 +33,7 @@ completion["hrsh7th/nvim-cmp"] = {
 		{ "hrsh7th/cmp-path", after = "cmp-tmux" },
 		{ "f3fora/cmp-spell", after = "cmp-path" },
 		{ "hrsh7th/cmp-buffer", after = "cmp-spell" },
+		{ "kdheepak/cmp-latex-symbols", after = "cmp-buffer" },
 	},
 }
 completion["L3MON4D3/LuaSnip"] = {
