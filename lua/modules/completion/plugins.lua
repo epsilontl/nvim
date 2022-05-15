@@ -6,7 +6,7 @@ completion["neovim/nvim-lspconfig"] = {
     event = 'BufReadPre',
     config = conf.nvim_lsp
 }
-completion["williamboman/nvim-lsp-installer"] = {opt = true, after = 'nvim-lspconfig'}
+completion["williamboman/nvim-lsp-installer"] = {opt = false}
 completion["tami5/lspsaga.nvim"] = {
 	opt = true,
 	after = "nvim-lspconfig",
